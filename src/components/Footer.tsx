@@ -38,9 +38,12 @@ export function Footer() {
 						},
 						{ link: "https://twitter.com/beanmakers", icon: Twitter },
 						{ link: "https://discord.gg/SAfv4gk8hn", icon: Discord },
-						{ link: "", icon: Telegram },
-						{ link: "", icon: Patreon },
-						{ link: "https://www.reddit.com/u/thebeanmakers", icon: Reddit },
+						{ link: "https://t.me/thebeantalk", icon: Telegram },
+						{ link: "https://www.patreon.com/thebeanmakers", icon: Patreon },
+						{
+							link: "https://www.reddit.com/r/thebeanmakersofficial",
+							icon: Reddit,
+						},
 						{ link: "https://pin.it/4fnZzeV", icon: Pinterest },
 					].map(({ link, icon: Icon }, i) => (
 						<IconButton
