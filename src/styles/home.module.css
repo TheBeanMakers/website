@@ -1,0 +1,77 @@
+.bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	z-index: -1;
+}
+
+.wrapper-1 {
+	background-image: url("https://cdn.discordapp.com/attachments/957337496847519754/957341717147824218/home_bg.webp");
+	background-attachment: fixed;
+}
+
+.wrapper-2 {
+	background-image: url("https://cdn.discordapp.com/attachments/957337496847519754/957426848986431578/stalk.webp");
+}
+
+.wrapper-1,
+.wrapper-2 {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.animated-logo__glow {
+	animation: spin 4s linear infinite;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	box-shadow: inset 0 0 50px #fff, inset 20px 0 60px violet,
+		inset -20px 0 60px #0ff, inset 20px 0 300px violet, inset -20px 0 300px #0ff,
+		0 0 50px #fff, -10px 0 60px violet, 10px 0 60px #0ff;
+}
+
+.container-1__btn {
+	z-index: 10 !important;
+	margin-top: 6rem !important;
+	font-size: 1rem !important;
+	background-color: #f2aa4cff !important;
+	padding: 12px 20px !important;
+	color: #101820ff !important;
+}
+
+.container-1__btn:hover {
+	background-color: transparent !important;
+	color: #f2aa4cff !important;
+	border: 1px solid #f2aa4cff;
+}
+
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+.container-2__link-icon,
+.container-2__link-text {
+	color: #f2aa4cff !important;
+	transition: color 0.3s ease;
+}
+
+.container-2__link-text {
+	display: block !important;
+	text-decoration: underline !important;
+}
+
+.container-2__link-icon {
+	margin-left: 4px;
+}
+
+.container-2__link-text:hover + .container-2__link-icon,
+.container-2__link-text:hover {
+	color: whitesmoke !important;
+}

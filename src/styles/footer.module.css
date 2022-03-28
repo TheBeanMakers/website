@@ -1,0 +1,14 @@
+.footer-icon {
+	position: relative !important;
+	top: 0 !important;
+	color: #fee715ff !important;
+	margin: 0 4px !important;
+	border-radius: 14% !important;
+	transition: all 0.3s ease-in-out !important;
+}
+
+.footer-icon:hover {
+	top: -6px !important;
+	background: #f2aa4cff !important;
+	color: #101820ff !important;
+}

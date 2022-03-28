@@ -1,0 +1,52 @@
+.navbar {
+	transform: translateX(-50%);
+	background: transparent;
+}
+
+@keyframes fill-slider {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+.navbar__btn {
+	position: relative;
+	color: whitesmoke !important;
+	margin: 0 8px !important;
+	font-size: 1rem !important;
+}
+
+.navbar__btn:hover {
+	background-color: transparent !important;
+}
+
+.navbar__btn:hover > .navbar__btn__slider {
+	width: 100%;
+}
+
+.navbar__btn__slider {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	top: 90%;
+	width: 0%;
+	height: 2.5px;
+	background-color: #2db0fc;
+	transition: width 0.4s ease-in-out;
+}
+
+.navbar__btn-active > .navbar__btn__slider {
+	animation: fill-slider 0.5s ease-in-out 1.5s 1 forwards;
+}
+
+.nav__btn-icon {
+	color: whitesmoke !important;
+	transition: color 0.4s ease-in-out !important;
+}
+
+.nav__btn-icon:hover {
+	color: #2db0fc !important;
+}
