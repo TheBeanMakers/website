@@ -13,7 +13,6 @@ import Web3 from "web3";
 export const MetamaskContext = createContext<
 	Partial<{
 		isActive: boolean;
-		isLoading: boolean;
 		account: string | null;
 		library: Web3;
 		connect: () => Promise<void>;
@@ -26,14 +25,6 @@ export const Injected = new InjectedConnector({ supportedChainIds: [1, 3] });
 export function MetamaskProvider(props: { children: React.ReactNode }) {
 	const { activate, deactivate, account, active, library } = useWeb3React();
 	const [isActive, setIsActive] = useState(false);
-	const [isLoading, setIsLoading] = useState(true);
-
-	useEffect(() => {
-		connect().then(() => {
-			setIsLoading(false);
-		});
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
 
 	const handleIsActive = useCallback(() => {
 		setIsActive(active);
@@ -45,6 +36,7 @@ export function MetamaskProvider(props: { children: React.ReactNode }) {
 
 	const connect = async () => {
 		await activate(Injected);
+		setIsActive(true);
 	};
 
 	const disconnect = () => {
@@ -55,13 +47,12 @@ export function MetamaskProvider(props: { children: React.ReactNode }) {
 		() => ({
 			isActive,
 			account,
-			isLoading,
 			library,
 			connect,
 			disconnect,
 		}),
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-		[isActive, isLoading]
+		[isActive]
 	);
 
 	return (

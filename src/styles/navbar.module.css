@@ -56,7 +56,7 @@
 	background: linear-gradient(
 			90deg,
 			rgba(110, 45, 252, 1),
-			rgba(234, 217, 21, 1) 51%,
+			#f2aa4cff 51%,
 			rgba(110, 45, 252, 1)
 		)
 		var(--position, 0) / 200% !important;
