@@ -50,3 +50,50 @@
 .nav__btn-icon:hover {
 	color: #2db0fc !important;
 }
+
+.navbar__account-info__login {
+	--position: 0%;
+	background: linear-gradient(
+			90deg,
+			rgba(110, 45, 252, 1),
+			rgba(234, 217, 21, 1) 51%,
+			rgba(110, 45, 252, 1)
+		)
+		var(--position, 0) / 200% !important;
+	width: 15rem !important;
+	height: 3.2rem !important;
+	color: whitesmoke !important;
+	transition: all 0.4s ease-in !important;
+}
+
+.navbar__account-info__login:hover {
+	--position: 100% !important;
+}
+
+.navbar__account-info__wallet {
+	color: whitesmoke !important;
+	border-radius: 5px !important;
+}
+
+.navbar__account-info__wallet__copy {
+	color: #2db0fc !important;
+	margin-left: 5px;
+	transition: color 0.25s ease-in !important;
+}
+
+.navbar__account-info__wallet__copy:hover {
+	color: #f2aa4cff !important;
+}
+
+.navbar__account-info__logout {
+	position: absolute !important;
+	top: 0 !important;
+	right: 0 !important;
+	color: #f2aa4cff !important;
+	margin: 10px !important;
+	transition: color 0.25s ease-in !important;
+}
+
+.navbar__account-info__logout:hover {
+	color: whitesmoke !important;
+}

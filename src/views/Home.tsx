@@ -9,6 +9,7 @@ export function Home() {
 	return (
 		<>
 			<Box
+				id="home_wrapper-1"
 				display="flex"
 				className={styles["wrapper-1"]}
 				position="relative"
@@ -58,8 +59,6 @@ export function Home() {
 							/>
 							<Box
 								component="img"
-								top="1"
-								left="1"
 								src="https://cdn.discordapp.com/attachments/957337496847519754/957388265596551188/logo.webp"
 								alt="Logo"
 								width="100%"
@@ -146,7 +145,7 @@ export function Home() {
 							"https://cdn.discordapp.com/attachments/957337496847519754/957627366413324308/bean2.webp",
 							"https://cdn.discordapp.com/attachments/957337496847519754/957627366639808562/bean3.webp",
 							"https://cdn.discordapp.com/attachments/957337496847519754/957627366149066752/bean1.webp",
-						].map((x) => (
+						].map((x, i) => (
 							<Box
 								component="img"
 								src={x}
@@ -154,6 +153,7 @@ export function Home() {
 								width="145px"
 								margin="4px"
 								borderRadius="5%"
+								key={i + 1}
 							/>
 						))}
 					</Box>

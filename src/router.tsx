@@ -6,6 +6,7 @@ export function RouterView() {
 	return (
 		<Routes>
 			<Route path="/" element={<Home />} />
+			<Route path="/about" element={<ComingSoon />} />
 			<Route path="/gallery" element={<ComingSoon />} />
 			<Route path="/cart" element={<ComingSoon />} />
 			<Route path="/merch" element={<ComingSoon />} />
