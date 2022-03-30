@@ -1,0 +1,25 @@
+.wrapper-1 {
+	background-image: url("https://media.discordapp.net/attachments/957337496847519754/957426849280036864/room2.webp");
+	background-attachment: fixed;
+}
+
+.wrapper-1,
+.wrapper-2 {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.container-1__text-container {
+	background-color: #101820ff;
+	padding: 2.5rem 3rem;
+	border-radius: 0 15px 15px 0;
+}
+
+.container-1__text {
+	background: linear-gradient(150deg, #eee 20%, #f2aa4cff 80%) !important;
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent !important;
+	background-clip: text !important;
+	color: whitesmoke;
+}

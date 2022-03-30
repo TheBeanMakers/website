@@ -1,13 +1,3 @@
-.bg {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	object-fit: cover;
-	z-index: -1;
-}
-
 .wrapper-1 {
 	background-image: url("https://cdn.discordapp.com/attachments/957337496847519754/957341717147824218/home_bg.webp");
 	background-attachment: fixed;

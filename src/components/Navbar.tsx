@@ -30,6 +30,7 @@ const NavBtn = (props: { text: string; active: boolean }) => (
 
 const LoginPopup = (props: {
 	anchorEl: (EventTarget & HTMLButtonElement) | null;
+	container: HTMLElement | null;
 	setAnchorState: (ele: (EventTarget & HTMLButtonElement) | null) => void;
 }) => {
 	const { connect, disconnect, isActive, account, library } = useMetamask();
@@ -70,7 +71,7 @@ const LoginPopup = (props: {
 					backgroundColor: "#101820ff",
 				},
 			}}
-			container={document.getElementById("home_wrapper-1")}
+			container={props.container}
 		>
 			{isActive && account ? (
 				<Box
@@ -178,16 +179,12 @@ export function Navbar() {
 			{["Home", "About", "Gallery", "Merch"].map((x, i) => (
 				<NavBtn text={x} active={x.toLowerCase() === activeTab} key={i + 1} />
 			))}
-			<Button
-				className={styles.navbar__btn}
-				disableRipple
-				href="mail:contact@thebeanmakers.com"
-				target="_blank"
-			>
-				Contact
-				<div className={styles.navbar__btn__slider}></div>
-			</Button>
 			<LoginPopup
+				container={document.getElementById(
+					`${
+						["home", "about"].includes(activeTab) ? activeTab : "coming-soon"
+					}_wrapper-1`
+				)}
 				anchorEl={loginPopupAnchor}
 				setAnchorState={setLoginPopUpAnchor}
 			/>

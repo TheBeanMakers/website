@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 export function ComingSoon() {
 	return (
 		<Box
+			id="coming-soon_wrapper-1"
 			display="flex"
 			alignItems="center"
 			justifyContent="center"

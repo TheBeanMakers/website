@@ -6,6 +6,7 @@ import Telegram from "@mui/icons-material/Telegram";
 import Reddit from "@mui/icons-material/Reddit";
 import Pinterest from "@mui/icons-material/Pinterest";
 import FavouriteOutlined from "@mui/icons-material/FavoriteOutlined";
+import EmailOutlined from "@mui/icons-material/EmailOutlined";
 import IconButton from "@mui/material/IconButton";
 
 import Discord from "./icons/Discord";
@@ -18,7 +19,7 @@ export function Footer() {
 			display="flex"
 			alignItems="center"
 			justifyContent="center"
-			minHeight="30vh"
+			minHeight="35vh"
 			borderTop="2px solid #fff"
 			textAlign="center"
 			flexWrap="wrap"
@@ -57,23 +58,36 @@ export function Footer() {
 						</IconButton>
 					))}
 				</Box>
-				<Box
-					display="flex"
-					marginTop="30px"
-					alignItems="center"
-					justifyContent="center"
-				>
+				<Box marginTop="20px" textAlign="center">
 					<Typography
+						display="flex"
 						fontFamily="Source Sans Pro"
 						fontSize="1.2rem"
+						alignItems="center"
+						justifyContent="center"
+						color="whitesmoke"
+					>
+						<EmailOutlined
+							height="1.2rem"
+							sx={{ marginRight: "10px", color: "#fee715ff" }}
+						/>
+						support@thebeanmakers.com
+					</Typography>
+					<Typography
+						display="flex"
+						fontFamily="Source Sans Pro"
+						fontSize="1.2rem"
+						marginTop="20px"
 						color="#FFD700"
+						alignItems="center"
+						justifyContent="center"
 					>
 						#StandWithUkraine
+						<FavouriteOutlined
+							height="1.2rem"
+							sx={{ marginLeft: "5px", color: "#0057B8" }}
+						/>
 					</Typography>
-					<FavouriteOutlined
-						height="1.2rem"
-						sx={{ marginLeft: "5px", color: "#0057B8" }}
-					/>
 				</Box>
 			</Box>
 		</Box>
