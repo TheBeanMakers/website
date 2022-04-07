@@ -3,6 +3,10 @@
 	background-attachment: fixed;
 }
 
+.wrapper-2 {
+	background-image: url("https://cdn.discordapp.com/attachments/957337496847519754/958802800895229952/floating.webp");
+}
+
 .wrapper-1,
 .wrapper-2 {
 	background-size: cover;
@@ -11,9 +15,7 @@
 }
 
 .container-1__text-container {
-	background-color: #101820ff;
-	padding: 2.5rem 3rem;
-	border-radius: 0 15px 15px 0;
+	background-color: rgba(16, 24, 32, 0.95);
 }
 
 .container-1__text {

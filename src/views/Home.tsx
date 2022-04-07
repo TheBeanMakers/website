@@ -179,10 +179,10 @@ export function Home() {
 							fontFamily="Source Sans Pro"
 						>
 							You are invited to explore our vast collection of 10,000 unique
-							beans where you can discover Hand Grown, Exotic, Seasonal and
-							Regular Beans. Hand Grown and Exotic beans are a curated variety
-							of beans, whereas Seasonal and Regular are more of a bountiful
-							harvest.
+							Magic Bean NFTs where you can discover Hand Grown, Exotic,
+							Seasonal and Regular Beans. Hand Grown and Exotic beans are a
+							curated variety of beans, whereas Seasonal and Regular are more of
+							a bountiful harvest.
 						</Typography>
 						<Box
 							className={styles["container-2__link"]}

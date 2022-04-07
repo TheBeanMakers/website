@@ -11,7 +11,7 @@ export function About() {
 	const handleSlideShowImage = () => {
 		setSlideShowImage(images[0]);
 		images.push(images.shift() || "");
-		setTimeout(handleSlideShowImage, 4000);
+		setTimeout(handleSlideShowImage, 2200);
 	};
 
 	useEffect(() => {
@@ -52,6 +52,8 @@ export function About() {
 						className={styles["container-1__text-container"]}
 						width="50%"
 						marginRight="5rem"
+						padding="2.5rem 3rem"
+						borderRadius="0 15px 15px 0"
 					>
 						<Typography
 							className={styles["container-1__text"]}
@@ -80,7 +82,7 @@ export function About() {
 					/>
 				</Box>
 			</Box>
-			{/* <Box
+			<Box
 				display="flex"
 				className={styles["wrapper-2"]}
 				position="relative"
@@ -104,8 +106,18 @@ export function About() {
 					alignItems="start"
 					flexWrap="wrap"
 					zIndex="1"
-				></Box>
-			</Box> */}
+				>
+					<Typography
+						fontSize="3rem"
+						fontFamily="Oswald"
+						fontWeight="600"
+						color="whitesmoke"
+					>
+						Welcome to the Guild
+					</Typography>
+					<Box height="4px" width="65%" sx={{ background: "#f2aa4cff" }}></Box>
+				</Box>
+			</Box>
 		</>
 	);
 }
