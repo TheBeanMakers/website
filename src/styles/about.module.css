@@ -1,3 +1,45 @@
+@media only screen and (max-width: 1200px) {
+	.container-1 {
+		padding-top: 5rem !important;
+		justify-content: center !important;
+		margin: 0 2rem !important;
+	}
+
+	.container-1__img {
+		margin: 2rem 0 !important;
+		width: 300px !important;
+		height: auto !important;
+	}
+
+	.container-1__text-container {
+		margin: 0 !important;
+		width: 60% !important;
+		border-radius: 0 !important;
+	}
+
+	.container-1__text {
+		font-size: 1.1rem !important;
+	}
+}
+
+@media only screen and (max-width: 830px) {
+	.container-1 {
+		margin: 0 !important;
+	}
+
+	.container-1__img {
+		width: 240px !important;
+	}
+
+	.container-1__text-container {
+		width: 100% !important;
+	}
+
+	.container-1__text {
+		font-size: 1rem !important;
+	}
+}
+
 .wrapper-1 {
 	background-image: url("https://media.discordapp.net/attachments/957337496847519754/957426849280036864/room2.webp");
 	background-attachment: fixed;

@@ -44,7 +44,7 @@ export function About() {
 					alignSelf="center"
 					justifyContent="flex-start"
 					alignItems="center"
-					flexWrap="wrap"
+					flexWrap="wrap-reverse"
 					paddingTop="2rem"
 					zIndex="1"
 				>
@@ -72,6 +72,7 @@ export function About() {
 						</Typography>
 					</Box>
 					<Box
+						className={styles["container-1__img"]}
 						component="img"
 						src={slideShowImage}
 						height="320px"
