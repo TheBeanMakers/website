@@ -167,6 +167,7 @@ export function Navbar() {
 			zIndex="1"
 		>
 			<Box
+				className={styles["navbar__logo"]}
 				component="img"
 				width="78px"
 				src="https://cdn.discordapp.com/attachments/957337496847519754/957388265596551188/logo.webp"

@@ -1,4 +1,16 @@
+@media only screen and (max-width: 395px) {
+	.footer-icon {
+		width: 1.8rem !important;
+		height: 1.8rem !important;
+	}
+}
+
 .footer-icon {
+	width: 2rem !important;
+	height: 2rem !important;
+}
+
+.footer-btn {
 	position: relative !important;
 	top: 0 !important;
 	color: #fee715ff !important;
@@ -7,7 +19,7 @@
 	transition: all 0.3s ease-in-out !important;
 }
 
-.footer-icon:hover {
+.footer-btn:hover {
 	top: -6px !important;
 	background: #f2aa4cff !important;
 	color: #101820ff !important;

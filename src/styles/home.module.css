@@ -1,3 +1,27 @@
+@media only screen and (max-width: 939px) {
+	.container-1__title {
+		flex-wrap: wrap !important;
+	}
+
+	.animated-logo {
+		margin: 0 !important;
+	}
+
+	.container-2__text-wrapper {
+		margin: 1rem !important;
+	}
+
+	.container-2__title {
+		width: fit-content !important;
+		font-size: 2.2rem !important;
+	}
+
+	.container-2__intro {
+		width: fit-content !important;
+		font-size: 1.2rem !important;
+	}
+}
+
 .wrapper-1 {
 	background-image: url("https://cdn.discordapp.com/attachments/957337496847519754/957341717147824218/home_bg.webp");
 	background-attachment: fixed;

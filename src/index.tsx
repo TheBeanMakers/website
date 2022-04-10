@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Web3ReactProvider } from "@web3-react/core";
 import Web3 from "web3";
 
-import "./index.css";
+import "./styles/index.css";
 import App from "./App";
 import { MetamaskProvider } from "./contexts/Metamask";
 

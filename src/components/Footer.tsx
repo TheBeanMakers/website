@@ -48,13 +48,13 @@ export function Footer() {
 						{ link: "https://pin.it/4fnZzeV", icon: Pinterest },
 					].map(({ link, icon: Icon }, i) => (
 						<IconButton
-							className={styles["footer-icon"]}
+							className={styles["footer-btn"]}
 							key={i + 1}
 							href={link}
 							target="_blank"
 							disableRipple
 						>
-							<Icon sx={{ width: "32px", height: "32px" }} />
+							<Icon className={styles["footer-icon"]} />
 						</IconButton>
 					))}
 				</Box>

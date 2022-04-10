@@ -126,7 +126,7 @@ export function Home() {
 					alignSelf="center"
 					justifyContent="center"
 					alignItems="start"
-					flexWrap="wrap"
+					flexWrap="wrap-reverse"
 					zIndex="1"
 				>
 					<Box
@@ -158,20 +158,27 @@ export function Home() {
 						))}
 					</Box>
 					<Box
+						className={styles["container-2__text-wrapper"]}
 						textAlign="left"
 						marginLeft="6rem"
 						color="whitesmoke"
 						alignSelf="center"
 					>
-						<Typography fontSize="3rem" fontFamily="Oswald" fontWeight="600">
-							Welcome Bean Hunters
-						</Typography>
-						<Box
-							height="4px"
-							width="65%"
-							sx={{ background: "#f2aa4cff" }}
-						></Box>
 						<Typography
+							className={styles["container-2__title"]}
+							fontSize="3rem"
+							fontFamily="Oswald"
+							fontWeight="600"
+						>
+							Welcome Bean Hunters
+							<Box
+								height="4px"
+								width="65%"
+								sx={{ background: "#f2aa4cff" }}
+							></Box>
+						</Typography>
+						<Typography
+							className={styles["container-2__intro"]}
 							width="30rem"
 							marginTop="2rem"
 							fontWeight="500"
