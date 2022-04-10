@@ -3,6 +3,11 @@
 		flex-wrap: wrap !important;
 	}
 
+	.container-1__title__text-wrapper,
+	.container-1__title {
+		margin-top: 3rem !important;
+	}
+
 	.animated-logo {
 		margin: 0 !important;
 	}

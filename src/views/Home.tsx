@@ -67,7 +67,11 @@ export function Home() {
 								sx={{ backgroundColor: "#000" }}
 							/>
 						</Box>
-						<Box alignSelf="center" textAlign="center">
+						<Box
+							className={styles["container-1__title__text-wrapper"]}
+							alignSelf="center"
+							textAlign="center"
+						>
 							<Typography
 								fontSize="4rem"
 								color="whitesmoke"

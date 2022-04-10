@@ -8,6 +8,7 @@ export function ComingSoon() {
 			display="flex"
 			alignItems="center"
 			justifyContent="center"
+			textAlign="center"
 			minHeight="100vh"
 			sx={{ background: "#101820ff" }}
 		>
