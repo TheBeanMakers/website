@@ -5,11 +5,21 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Popover from "@mui/material/Popover";
+import Drawer from "@mui/material/Drawer";
+import Divider from "@mui/material/Divider";
 import AccountCircleOutlined from "@mui/icons-material/AccountCircleOutlined";
 import ShoppingCartOutlined from "@mui/icons-material/ShoppingCartOutlined";
 import OpenInNew from "@mui/icons-material/OpenInNewOutlined";
 import CopyOutlined from "@mui/icons-material/ContentCopyOutlined";
 import LogoutOutlined from "@mui/icons-material/LogoutOutlined";
+import MenuOutlined from "@mui/icons-material/MenuOutlined";
+import ChevronLeftOutlined from "@mui/icons-material/ChevronLeftOutlined";
+import BrushOutlined from "@mui/icons-material/BrushOutlined";
+import HomeOutlined from "@mui/icons-material/HomeOutlined";
+import InfoOutlined from "@mui/icons-material/InfoOutlined";
+import ShoppingBagOutlined from "@mui/icons-material/ShoppingBagOutlined";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
 
 import styles from "../styles/navbar.module.css";
 import EthereumIcon from "./icons/Ethereum";
@@ -153,6 +163,8 @@ export function Navbar() {
 		setActiveTab(currentPath === "/" ? "home" : currentPath.split("/")[1]);
 	}, [currentPath]);
 
+	const [navBarOpen, setNavBarOpen] = useState(false);
+
 	return (
 		<Box
 			className={styles.navbar}
@@ -166,6 +178,67 @@ export function Navbar() {
 			left="50%"
 			zIndex="1"
 		>
+			<Drawer
+				open={navBarOpen}
+				className={styles["navbar-mobile__drawer"]}
+				PaperProps={{
+					className: styles["navbar-mobile__drawer-paper"],
+				}}
+				BackdropProps={{
+					onClick: () => setNavBarOpen(false),
+				}}
+			>
+				<IconButton
+					className={styles["navbar-mobile__drawer__back-btn"]}
+					onClick={() => setNavBarOpen(false)}
+				>
+					<ChevronLeftOutlined
+						className={styles["navbar-mobile__drawer__back-icon"]}
+					/>
+				</IconButton>
+				<Divider />
+				<List>
+					{[
+						{ name: "Home", icon: HomeOutlined },
+						{ name: "About", icon: InfoOutlined },
+						{ name: "Gallery", icon: BrushOutlined },
+						{ name: "Merch", icon: ShoppingBagOutlined },
+					].map(({ name, icon: Icon }, i) => (
+						<ListItem
+							className={styles["navbar-mobile__drawer__list-item"]}
+							disablePadding
+							alignItems="center"
+							key={i + 1}
+						>
+							<Button
+								className={styles["navbar-mobile__drawer__list-item__btn"]}
+								onClick={() => {
+									setNavBarOpen(false);
+									window.location.href =
+										name === "Home" ? "/" : `/${name.toLowerCase()}`;
+								}}
+								endIcon={
+									<Icon
+										className={styles["navbar-mobile__drawer__list-item__icon"]}
+									/>
+								}
+							>
+								{name}
+							</Button>
+						</ListItem>
+					))}
+				</List>
+			</Drawer>
+			<Box className={styles["navbar-mobile__btn"]}>
+				<IconButton
+					disableRipple
+					sx={{ color: "whitesmoke" }}
+					onClick={() => setNavBarOpen(true)}
+				>
+					<MenuOutlined />
+				</IconButton>
+			</Box>
+			<Box className={styles["navbar-mobile__spacer"]} flexGrow={1}></Box>
 			<Box
 				className={styles["navbar__logo"]}
 				component="img"
@@ -202,7 +275,7 @@ export function Navbar() {
 			{[
 				{ icon: AccountCircleOutlined },
 				{ link: "/cart", icon: ShoppingCartOutlined },
-			].map(({ icon: Ele, ...x }, i) => (
+			].map(({ icon: Icon, ...x }, i) => (
 				<IconButton
 					className={styles["nav__btn-icon"]}
 					key={i + 1}
@@ -215,7 +288,7 @@ export function Navbar() {
 								},
 						  })}
 				>
-					<Ele sx={{ fontSize: "1.85rem" }} />
+					<Icon sx={{ fontSize: "1.85rem" }} />
 				</IconButton>
 			))}
 		</Box>

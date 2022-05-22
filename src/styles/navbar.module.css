@@ -1,6 +1,7 @@
-@media only screen and (max-width: 939px) {
+@media only screen and (max-width: 1050px) {
 	.navbar {
-		width: 100% !important;
+		width: 95% !important;
+		z-index: 2 !important;
 	}
 
 	.navbar__logo {
@@ -10,11 +11,63 @@
 	.navbar__btn {
 		display: none !important;
 	}
+
+	.navbar-mobile__btn,
+	.navbar-mobile__spacer {
+		display: block !important;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.nav__btn-icon {
+		display: none !important;
+	}
 }
 
 .navbar {
 	transform: translateX(-50%);
 	background: transparent;
+}
+
+.navbar-mobile__drawer-paper {
+	width: 4.5rem;
+	background-color: #101820ff !important;
+	text-align: center;
+}
+
+.navbar-mobile__drawer__back-btn {
+	width: 100%;
+	padding: 0;
+}
+
+.navbar-mobile__drawer__back-icon {
+	font-size: 2.2rem !important;
+	margin: 1rem 0;
+	color: #f2aa4cff;
+}
+
+.navbar-mobile__drawer__list-item {
+	justify-content: center !important;
+}
+
+.navbar-mobile__drawer__list-item__btn {
+	text-align: center;
+	transform: rotate(90deg);
+	font-size: 0.8rem !important;
+	color: whitesmoke !important;
+	padding: 0 !important;
+	margin: 3rem 0 !important;
+}
+
+.navbar-mobile__drawer__list-item__icon {
+	transform: rotate(-90deg);
+	font-size: 2.1rem !important;
+	color: #f2aa4cff;
+}
+
+.navbar-mobile__btn,
+.navbar-mobile__spacer {
+	display: none;
 }
 
 @keyframes fill-slider {

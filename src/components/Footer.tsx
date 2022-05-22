@@ -27,9 +27,11 @@ export function Footer() {
 		>
 			<Box>
 				<Box
+					className={styles["footer__btn-group"]}
 					display="flex"
 					alignItems="center"
 					justifyContent="center"
+					flexWrap="wrap"
 					width="100%"
 				>
 					{[
@@ -40,53 +42,52 @@ export function Footer() {
 						{ link: "https://twitter.com/beanmakers", icon: Twitter },
 						{ link: "https://discord.gg/SAfv4gk8hn", icon: Discord },
 						{ link: "https://t.me/thebeantalk", icon: Telegram },
+						{ link: null, icon: null },
 						{ link: "https://www.patreon.com/thebeanmakers", icon: Patreon },
 						{
 							link: "https://www.reddit.com/r/thebeanmakersofficial",
 							icon: Reddit,
 						},
 						{ link: "https://pin.it/4fnZzeV", icon: Pinterest },
-					].map(({ link, icon: Icon }, i) => (
-						<IconButton
-							className={styles["footer-btn"]}
-							key={i + 1}
-							href={link}
-							target="_blank"
-							disableRipple
-						>
-							<Icon className={styles["footer-icon"]} />
-						</IconButton>
-					))}
+					].map(({ link, icon: Icon }, i) =>
+						link === null && Icon === null ? (
+							<Box className={styles["footer__icon-break"]} key={i + 1} />
+						) : (
+							<IconButton
+								className={styles["footer-btn"]}
+								key={i + 1}
+								href={link}
+								target="_blank"
+								disableRipple
+							>
+								<Icon className={styles["footer-icon"]} />
+							</IconButton>
+						)
+					)}
 				</Box>
 				<Box marginTop="20px" textAlign="center">
 					<Typography
+						className={styles["footer-text"]}
 						display="flex"
 						fontFamily="Source Sans Pro"
-						fontSize="1.2rem"
 						alignItems="center"
 						justifyContent="center"
 						color="whitesmoke"
 					>
-						<EmailOutlined
-							height="1.2rem"
-							sx={{ marginRight: "10px", color: "#fee715ff" }}
-						/>
+						<EmailOutlined sx={{ marginRight: "10px", color: "#fee715ff" }} />
 						support@thebeanmakers.com
 					</Typography>
 					<Typography
+						className={styles["footer-text"]}
 						display="flex"
 						fontFamily="Source Sans Pro"
-						fontSize="1.2rem"
 						marginTop="20px"
 						color="#FFD700"
 						alignItems="center"
 						justifyContent="center"
 					>
 						#StandWithUkraine
-						<FavouriteOutlined
-							height="1.2rem"
-							sx={{ marginLeft: "5px", color: "#0057B8" }}
-						/>
+						<FavouriteOutlined sx={{ marginLeft: "5px", color: "#0057B8" }} />
 					</Typography>
 				</Box>
 			</Box>

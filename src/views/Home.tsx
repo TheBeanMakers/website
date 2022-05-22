@@ -21,7 +21,7 @@ export function Home() {
 					top="0"
 					left="0"
 					minWidth="100%"
-					minHeight="100vh"
+					minHeight="100%"
 					sx={{ backgroundColor: "rgba(21, 61, 89, 0.45)" }}
 					className={styles["bg-overlay"]}
 				/>
@@ -52,10 +52,10 @@ export function Home() {
 							width="200px"
 						>
 							<Box
+								className={styles["animated-logo__glow"]}
 								top="1"
 								left="1"
 								position="absolute"
-								className={styles["animated-logo__glow"]}
 							/>
 							<Box
 								component="img"
@@ -67,6 +67,7 @@ export function Home() {
 								sx={{ backgroundColor: "#000" }}
 							/>
 						</Box>
+						<Box className={styles["container-1__logo-break"]}></Box>
 						<Box
 							className={styles["container-1__title__text-wrapper"]}
 							alignSelf="center"
@@ -120,7 +121,7 @@ export function Home() {
 					top="0"
 					left="0"
 					minWidth="100%"
-					minHeight="100vh"
+					minHeight="100%"
 					sx={{ backgroundColor: "rgba(73, 34, 141, 0.45)" }}
 					className={styles["bg-overlay"]}
 				/>
@@ -133,32 +134,20 @@ export function Home() {
 					flexWrap="wrap-reverse"
 					zIndex="1"
 				>
-					<Box
-						display="flex"
-						flexWrap="wrap"
-						alignSelf="center"
-						height="auto"
-						width="306px"
-						borderRadius="5%"
-						padding="15px"
-						border="1px solid whitesmoke"
-						sx={{ background: "#101820ff" }}
-					>
+					<Box className={styles["container-2__slideshow"]}>
 						{[
 							"https://cdn.discordapp.com/attachments/957337496847519754/957627365918375987/bean4.webp",
 							"https://cdn.discordapp.com/attachments/957337496847519754/957627366413324308/bean2.webp",
 							"https://cdn.discordapp.com/attachments/957337496847519754/957627366639808562/bean3.webp",
 							"https://cdn.discordapp.com/attachments/957337496847519754/957627366149066752/bean1.webp",
 						].map((x, i) => (
-							<Box
-								component="img"
-								src={x}
-								height="145px"
-								width="145px"
-								margin="4px"
-								borderRadius="5%"
-								key={i + 1}
-							/>
+							<Box height="50%" width="50%" key={i + 1}>
+								<Box
+									className={styles["container-2__slideshow-img"]}
+									component="img"
+									src={x}
+								/>
+							</Box>
 						))}
 					</Box>
 					<Box
@@ -175,12 +164,12 @@ export function Home() {
 							fontWeight="600"
 						>
 							Welcome Bean Hunters
-							<Box
-								height="4px"
-								width="65%"
-								sx={{ background: "#f2aa4cff" }}
-							></Box>
 						</Typography>
+						<Box
+							height="4px"
+							width="65%"
+							sx={{ background: "#f2aa4cff" }}
+						></Box>
 						<Typography
 							className={styles["container-2__intro"]}
 							width="30rem"
