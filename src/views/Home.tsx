@@ -59,7 +59,7 @@ export function Home() {
 							/>
 							<Box
 								component="img"
-								src="https://cdn.discordapp.com/attachments/957337496847519754/957388265596551188/logo.webp"
+								src="https://thatanonyg-personal.s3.ap-south-1.amazonaws.com/beanmakers/logo.webp"
 								alt="Logo"
 								width="100%"
 								borderRadius="50%"

@@ -42,12 +42,12 @@
 }
 
 .wrapper-1 {
-	background-image: url("https://media.discordapp.net/attachments/957337496847519754/957426849280036864/room2.webp");
+	background-image: url("https://thatanonyg-personal.s3.ap-south-1.amazonaws.com/beanmakers/room_bg.webp");
 	background-attachment: fixed;
 }
 
 .wrapper-2 {
-	background-image: url("https://cdn.discordapp.com/attachments/957337496847519754/958802800895229952/floating.webp");
+	background-image: url("https://thatanonyg-personal.s3.ap-south-1.amazonaws.com/beanmakers/floating_bean_bg.webp");
 }
 
 .wrapper-1,

@@ -243,7 +243,7 @@ export function Navbar() {
 				className={styles["navbar__logo"]}
 				component="img"
 				width="78px"
-				src="https://cdn.discordapp.com/attachments/957337496847519754/957388265596551188/logo.webp"
+				src="https://thatanonyg-personal.s3.ap-south-1.amazonaws.com/beanmakers/logo.webp"
 				alt="Logo"
 			/>
 			<Typography fontFamily="Oswald" fontSize="2rem" fontWeight={600}>
@@ -256,7 +256,9 @@ export function Navbar() {
 			<LoginPopup
 				container={document.getElementById(
 					`${
-						["home", "about"].includes(activeTab) ? activeTab : "coming-soon"
+						["home", "about", "gallery"].includes(activeTab)
+							? activeTab
+							: "coming-soon"
 					}_wrapper-1`
 				)}
 				anchorEl={loginPopupAnchor}
