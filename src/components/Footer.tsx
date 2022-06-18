@@ -5,7 +5,6 @@ import Twitter from "@mui/icons-material/Twitter";
 import Telegram from "@mui/icons-material/Telegram";
 import Reddit from "@mui/icons-material/Reddit";
 import Pinterest from "@mui/icons-material/Pinterest";
-import FavouriteOutlined from "@mui/icons-material/FavoriteOutlined";
 import EmailOutlined from "@mui/icons-material/EmailOutlined";
 import IconButton from "@mui/material/IconButton";
 
