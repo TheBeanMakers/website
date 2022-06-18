@@ -6,6 +6,18 @@ import ArrowRight from "@mui/icons-material/ArrowRightAltOutlined";
 import styles from "../styles/home.module.css";
 
 export function Home() {
+	const Emphasis = ({ text }: { text: string }) => (
+		<span
+			style={{
+				color: "#f2aa4cff",
+				fontWeight: 600,
+				fontStyle: "italic",
+			}}
+		>
+			{text}
+		</span>
+	);
+
 	return (
 		<>
 			<Box
@@ -134,21 +146,12 @@ export function Home() {
 					flexWrap="wrap-reverse"
 					zIndex="1"
 				>
-					<Box className={styles["container-2__slideshow"]}>
-						{[
-							"https://cdn.discordapp.com/attachments/957337496847519754/957627365918375987/bean4.webp",
-							"https://cdn.discordapp.com/attachments/957337496847519754/957627366413324308/bean2.webp",
-							"https://cdn.discordapp.com/attachments/957337496847519754/957627366639808562/bean3.webp",
-							"https://cdn.discordapp.com/attachments/957337496847519754/957627366149066752/bean1.webp",
-						].map((x, i) => (
-							<Box height="50%" width="50%" key={i + 1}>
-								<Box
-									className={styles["container-2__slideshow-img"]}
-									component="img"
-									src={x}
-								/>
-							</Box>
-						))}
+					<Box className={styles["container-2__img-container"]}>
+						<Box
+							className={styles["container-2__img"]}
+							component="img"
+							src="https://thatanonyg-personal.s3.ap-south-1.amazonaws.com/beanmakers/cabin.webp"
+						/>
 					</Box>
 					<Box
 						className={styles["container-2__text-wrapper"]}
@@ -178,11 +181,13 @@ export function Home() {
 							fontSize="1.3rem"
 							fontFamily="Source Sans Pro"
 						>
-							You are invited to explore our vast collection of 10,000 unique
-							Magic Bean NFTs where you can discover Hand Grown, Exotic,
-							Seasonal and Regular Beans. Hand Grown and Exotic beans are a
-							curated variety of beans, whereas Seasonal and Regular are more of
-							a bountiful harvest.
+							You are invited to explore our vast collection of{" "}
+							<Emphasis text="10,000" /> unique Magic Bean NFTs where you can
+							discover <Emphasis text="Hand Grown" />,{" "}
+							<Emphasis text="Exotic" />, <Emphasis text="Seasonal" />, and{" "}
+							<Emphasis text="Regular Beans" />. Hand Grown and Exotic beans are
+							a curated variety of beans, whereas Seasonal and Regular are more
+							of a bountiful harvest.
 						</Typography>
 						<Box
 							className={styles["container-2__link"]}

@@ -65,9 +65,16 @@ export function Footer() {
 						)
 					)}
 				</Box>
-				<Box marginTop="20px" textAlign="center">
+				<Box
+					display="flex"
+					justifyContent="center"
+					flexWrap="wrap"
+					marginTop="20px"
+					textAlign="center"
+				>
 					<Typography
 						className={styles["footer-text"]}
+						width="100%"
 						display="flex"
 						fontFamily="Source Sans Pro"
 						alignItems="center"
@@ -78,16 +85,14 @@ export function Footer() {
 						support@thebeanmakers.com
 					</Typography>
 					<Typography
-						className={styles["footer-text"]}
-						display="flex"
+						className={`${styles["footer-text"]} ${styles["footer-text__pride"]}`}
 						fontFamily="Source Sans Pro"
+						width="fit-content"
 						marginTop="20px"
-						color="#FFD700"
-						alignItems="center"
-						justifyContent="center"
+						fontWeight="600"
+						letterSpacing="0.5px"
 					>
-						#StandWithUkraine
-						<FavouriteOutlined sx={{ marginLeft: "5px", color: "#0057B8" }} />
+						#StandWithPride
 					</Typography>
 				</Box>
 			</Box>
