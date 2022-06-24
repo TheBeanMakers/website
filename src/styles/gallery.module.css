@@ -1,5 +1,54 @@
+@media screen and (max-width: 600px) {
+	.container-1 {
+		width: 80vw !important;
+	}
+}
+
+@media screen and (max-width: 460px) {
+	.container-1 {
+		justify-content: flex-start !important;
+	}
+	.question-mark {
+		width: 140px !important;
+		padding: 4px !important;
+	}
+}
+
+@media screen and (max-width: 410px) {
+	.question-mark {
+		width: 125px !important;
+	}
+}
+
+@media screen and (max-width: 370px) {
+	.container-1 {
+		width: 70vw !important;
+		justify-content: center !important;
+	}
+	.question-mark {
+		width: 135px !important;
+	}
+}
+
 .question-mark {
 	width: 150px;
 	height: auto;
 	padding: 8px;
+}
+
+.scroll_items {
+	transform: translateY(-50%) !important;
+}
+
+.arrow-up,
+.arrow-down {
+	color: #f2aa4cff !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.text {
+	color: #fff !important;
+	transform: rotate(-90deg);
+	margin: 4rem 0 !important;
 }
