@@ -1,21 +1,34 @@
 import { useEffect, useState } from "react";
+import SkeletonLoader from "react-loading-skeleton";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import "react-loading-skeleton/dist/skeleton.css";
 
 import styles from "../styles/about.module.css";
-import images from "../assets/images.json";
 
 export function About() {
+	const [loading, setLoading] = useState(false);
+	const [images, setImages] = useState<string[]>([]);
 	const [slideShowImage, setSlideShowImage] = useState("");
 
 	const handleSlideShowImage = () => {
-		setSlideShowImage(images[0]);
-		images.push(images.shift() || "");
+		const imagesClone = [...images];
+		const currentImage = imagesClone.shift() || "";
+		setSlideShowImage(currentImage);
+		setImages([...imagesClone, currentImage]);
 		setTimeout(handleSlideShowImage, 2200);
 	};
 
 	useEffect(() => {
-		handleSlideShowImage();
+		setLoading(true);
+		fetch("https://api.thebeanmakers.com/assets?type=about-slideshow")
+			.then((data) => data.json())
+			.then((data) => {
+				setLoading(false);
+				setImages(data.images);
+				handleSlideShowImage();
+			})
+			.catch(() => console.log("Error in fetching slideshow images"));
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
@@ -73,13 +86,18 @@ export function About() {
 					</Box>
 					<Box
 						className={styles["container-1__img"]}
-						component="img"
-						src={slideShowImage}
 						height="320px"
 						width="320px"
 						borderRadius="5%"
 						marginLeft="5rem"
 						boxShadow="rgba(0, 0, 0, 0.45) 0px 12px 28px 0px, rgba(0, 0, 0, 0.35) 0px 2px 4px 0px, rgba(255, 255, 255, 0.3) 0px 0px 0px 1px inset"
+						{...(loading
+							? {
+									component: SkeletonLoader,
+									baseColor: "#f2aa4cff",
+									highlightColor: "rgba(255, 255, 255, 0.3)",
+							  }
+							: { component: "img", src: slideShowImage })}
 					/>
 				</Box>
 			</Box>
