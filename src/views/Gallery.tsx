@@ -65,7 +65,7 @@ export function Gallery() {
 					<Box
 						className={styles["question-mark"]}
 						component="img"
-						src="https://thatanonyg-personal.s3.ap-south-1.amazonaws.com/beanmakers/question_mark.webp"
+						src="https://cdn.thebeanmakers.com/assets/question_mark.webp"
 						alt="Reveal Question Mark"
 						key={i + 1}
 					/>

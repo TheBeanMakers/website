@@ -49,12 +49,12 @@
 }
 
 .wrapper-1 {
-	background-image: url("https://thatanonyg-personal.s3.ap-south-1.amazonaws.com/beanmakers/cabin_bg.webp");
+	background-image: url("https://cdn.thebeanmakers.com/assets/cabin_bg.webp");
 	background-attachment: fixed;
 }
 
 .wrapper-2 {
-	background-image: url("https://thatanonyg-personal.s3.ap-south-1.amazonaws.com/beanmakers/stalk_bg.webp");
+	background-image: url("https://cdn.thebeanmakers.com/assets/stalk_bg.webp");
 }
 
 .wrapper-1,

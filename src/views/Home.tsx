@@ -71,7 +71,7 @@ export function Home() {
 							/>
 							<Box
 								component="img"
-								src="https://thatanonyg-personal.s3.ap-south-1.amazonaws.com/beanmakers/logo.webp"
+								src="https://cdn.thebeanmakers.com/assets/logo.webp"
 								alt="Logo"
 								width="100%"
 								borderRadius="50%"
@@ -150,7 +150,7 @@ export function Home() {
 						<Box
 							className={styles["container-2__img"]}
 							component="img"
-							src="https://thatanonyg-personal.s3.ap-south-1.amazonaws.com/beanmakers/cabin.webp"
+							src="https://cdn.thebeanmakers.com/assets/cabin.webp"
 						/>
 					</Box>
 					<Box

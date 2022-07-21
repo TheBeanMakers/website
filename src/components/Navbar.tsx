@@ -243,7 +243,7 @@ export function Navbar() {
 				className={styles["navbar__logo"]}
 				component="img"
 				width="78px"
-				src="https://thatanonyg-personal.s3.ap-south-1.amazonaws.com/beanmakers/logo.webp"
+				src="https://cdn.thebeanmakers.com/assets/logo.webp"
 				alt="Logo"
 			/>
 			<Typography fontFamily="Oswald" fontSize="2rem" fontWeight={600}>
