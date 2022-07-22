@@ -8,7 +8,7 @@
 	.container-1__img {
 		margin: 2rem 0 !important;
 		width: 300px !important;
-		height: auto !important;
+		height: 300px !important;
 	}
 
 	.container-1__text-container {
@@ -22,6 +22,22 @@
 	}
 }
 
+@media only screen and (max-width: 900px) {
+	.container-2__body {
+		flex-wrap: wrap !important;
+		margin-top: 2rem !important;
+	}
+
+	.container-2__body-break {
+		display: block !important;
+	}
+
+	.container-2__body-text-container {
+		margin: 20px 0 !important;
+		width: 80% !important;
+	}
+}
+
 @media only screen and (max-width: 830px) {
 	.container-1 {
 		padding-top: 0rem !important;
@@ -30,6 +46,7 @@
 
 	.container-1__img {
 		width: 240px !important;
+		height: 240px !important;
 	}
 
 	.container-1__text-container {
@@ -38,6 +55,23 @@
 
 	.container-1__text {
 		font-size: 1rem !important;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.container-1__img {
+		margin-top: 7rem !important;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	.container-2__welcome-title {
+		text-align: center !important;
+	}
+
+	.container-2__body-img {
+		height: 200px !important;
+		width: 200px !important;
 	}
 }
 
@@ -67,4 +101,20 @@
 	-webkit-text-fill-color: transparent !important;
 	background-clip: text !important;
 	color: whitesmoke;
+}
+
+.container-2__body-break {
+	display: none;
+}
+
+.container-2__body-text-container {
+	margin-left: 3rem;
+}
+
+.container-2__body-discord {
+	margin-top: 15px !important;
+	font-size: 1rem !important;
+	background-color: #5865f2 !important;
+	padding: 8px 18px !important;
+	color: whitesmoke !important;
 }

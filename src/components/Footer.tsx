@@ -39,7 +39,7 @@ export function Footer() {
 							icon: Instagram,
 						},
 						{ link: "https://twitter.com/beanmakers", icon: Twitter },
-						{ link: "https://discord.gg/SAfv4gk8hn", icon: Discord },
+						{ link: "https://discord.thebeanmakers.com", icon: Discord },
 						{ link: "https://t.me/thebeantalk", icon: Telegram },
 						{ link: null, icon: null },
 						{ link: "https://www.patreon.com/thebeanmakers", icon: Patreon },

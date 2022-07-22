@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import Button from "@mui/material/Button";
 import SkeletonLoader from "react-loading-skeleton";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import "react-loading-skeleton/dist/skeleton.css";
 
 import styles from "../styles/about.module.css";
+import DiscordIcon from "../components/icons/Discord";
 
 export function About() {
 	const [loading, setLoading] = useState(false);
@@ -110,34 +112,109 @@ export function About() {
 				position="relative"
 				minHeight="100vh"
 				justifyContent="center"
+				alignItems="start"
 			>
 				<Box
 					position="absolute"
 					top="0"
 					left="0"
 					minWidth="100%"
-					minHeight="100vh"
+					minHeight="100%"
 					sx={{ backgroundColor: "rgba(73, 34, 141, 0.5)" }}
 					className={styles["bg-overlay"]}
 				/>
 				<Box
 					className={styles["container-2"]}
 					display="flex"
-					alignSelf="center"
 					justifyContent="center"
-					alignItems="start"
 					flexWrap="wrap"
 					zIndex="1"
+					marginTop="3rem"
 				>
-					<Typography
-						fontSize="3rem"
-						fontFamily="Oswald"
-						fontWeight="600"
-						color="whitesmoke"
+					<Box
+						className={styles["container-2__welcome"]}
+						display="flex"
+						justifyContent="center"
+						flexWrap="wrap"
+						height="fit-content"
 					>
-						Welcome to the Guild
-					</Typography>
-					<Box height="4px" width="65%" sx={{ background: "#f2aa4cff" }}></Box>
+						<Typography
+							className={styles["container-2__welcome-title"]}
+							fontSize="3rem"
+							fontFamily="Oswald"
+							fontWeight="600"
+							color="whitesmoke"
+						>
+							Welcome to the Guild
+						</Typography>
+						<Box
+							height="4px"
+							width="65%"
+							sx={{ background: "#f2aa4cff" }}
+						></Box>
+					</Box>
+					<Box
+						className={styles["container-2__body"]}
+						display="flex"
+						justifyContent="center"
+						alignItems="center"
+						width="100%"
+						marginTop="5rem"
+					>
+						<Box
+							className={styles["container-2__body-img"]}
+							component="img"
+							src="https://cdn.thebeanmakers.com/assets/gamebanner.webp"
+							height="320px"
+							width="320px"
+						></Box>
+						<Box
+							className={styles["container-2__body-break"]}
+							height="0"
+							width="100%"
+						></Box>
+						<Box
+							className={styles["container-2__body-text-container"]}
+							padding="2rem"
+							width="45%"
+							sx={{ background: "#101820ff" }}
+						>
+							<Typography
+								fontSize="2.4rem"
+								fontFamily="Oswald"
+								fontWeight="600"
+								color="#f2aa4cff"
+							>
+								GAME LAUNCHING SOON!
+							</Typography>
+							<Box
+								height="2px"
+								width="40%"
+								marginY="10px"
+								sx={{ background: "white" }}
+							></Box>
+							<Typography
+								fontSize="1.7rem"
+								fontFamily="Oswald"
+								fontWeight="600"
+								color="whitesmoke"
+							>
+								Come back to this page for news about the perks and rewards you
+								get for being a member of the Guild. They will be launched as
+								the NFT sales are going on and beyond the sale period as well!
+								Join our Discord to find out about these quicker!
+							</Typography>
+							<Button
+								className={styles["container-2__body-discord"]}
+								disableRipple
+								href="https://discord.thebeanmakers.com"
+								target="_blank"
+								startIcon={<DiscordIcon />}
+							>
+								Join Now!
+							</Button>
+						</Box>
+					</Box>
 				</Box>
 			</Box>
 		</>
