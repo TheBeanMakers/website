@@ -19,7 +19,7 @@ export function About() {
 
 	useEffect(() => {
 		setLoading(true);
-		fetch("http://localhost:3001/assets?type=about-slideshow")
+		fetch("https://api.thebeanmakers.com/assets?type=about-slideshow")
 			.then((data) => data.json())
 			.then((data) => {
 				setImages(data.images);
