@@ -8,29 +8,32 @@ import styles from "../styles/about.module.css";
 
 export function About() {
 	const [loading, setLoading] = useState(false);
-	const [images, setImages] = useState<string[]>([]);
-	const [slideShowImage, setSlideShowImage] = useState("");
+	const [images, setImages] = useState<string[]>();
+	const [slideShowImage, setSlideShowImage] = useState(-1);
 
 	const handleSlideShowImage = () => {
-		const imagesClone = [...images];
-		const currentImage = imagesClone.shift() || "";
-		setSlideShowImage(currentImage);
-		setImages([...imagesClone, currentImage]);
-		setTimeout(handleSlideShowImage, 2200);
+		setSlideShowImage(
+			slideShowImage === (images || []).length - 1 ? 0 : slideShowImage + 1
+		);
 	};
 
 	useEffect(() => {
 		setLoading(true);
-		fetch("https://api.thebeanmakers.com/assets?type=about-slideshow")
+		fetch("http://localhost:3001/assets?type=about-slideshow")
 			.then((data) => data.json())
 			.then((data) => {
-				setLoading(false);
 				setImages(data.images);
-				handleSlideShowImage();
+				setSlideShowImage(0);
+				setLoading(false);
 			})
 			.catch(() => console.log("Error in fetching slideshow images"));
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
+
+	useEffect(() => {
+		if (!loading) setTimeout(handleSlideShowImage, 2200);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [loading, slideShowImage]);
 
 	return (
 		<>
@@ -97,7 +100,7 @@ export function About() {
 									baseColor: "#f2aa4cff",
 									highlightColor: "rgba(255, 255, 255, 0.3)",
 							  }
-							: { component: "img", src: slideShowImage })}
+							: { component: "img", src: (images || [])[slideShowImage] })}
 					/>
 				</Box>
 			</Box>
